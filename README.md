@@ -35,18 +35,18 @@ Before you begin, ensure you have the following installed:
 
 1. Clone the repository:
    ```
-   git clone https://github.com/your-username/harry-potter-card-game.git
-   cd harry-potter-card-game
+   git clone https://github.com/sphllzulu/nodeMemoryCardGame.git
+   cd nodememorycard
    ```
 
 2. Install dependencies for both frontend and backend:
    ```
    # Install backend dependencies
-   cd server
+   cd backend
    npm install
 
    # Install frontend dependencies
-   cd ../client
+   cd frontend
    npm install
    ```
 
@@ -56,17 +56,18 @@ Before you begin, ensure you have the following installed:
 
 1. Start the backend server:
    ```
-   cd server
-   npm start
+   cd backend
+   node server
    ```
-   The server should start running on `http://localhost:5000` (or your specified port).
+   The server should start running on `http://localhost:5000` .
 
 2. In a new terminal, start the frontend development server:
    ```
-   cd client
+   cd frontend
+   cd memoryCards
    npm run dev
    ```
-   The frontend should be accessible at `http://localhost:3000` (or the next available port).
+   The frontend should be accessible at `http://localhost:5173` (or the next available port).
 
 3. Open your browser and navigate to the frontend URL to play the game.
 

@@ -1,170 +1,10 @@
-// import React, { useState, useEffect } from 'react';
-// import { Box, Button, Grid, Typography } from '@mui/material';
-// import CardComponent from './Card';
 
-// const Game = () => {
-
- 
-  
-//   const [cards, setCards] = useState([]);
-//   const [flippedCards, setFlippedCards] = useState([]);
-//   const [matchedCards, setMatchedCards] = useState([]);
-//   const [win, setWin] = useState(false);
-//   const [score, setScore] = useState(0);
-//   const [timer, setTimer] = useState(0);
-//   const [isActive, setIsActive] = useState(false);
-
-//   useEffect(() => {
-//     initializeGame();
-//   }, []);
-
-//   useEffect(() => {
-//     let interval = null;
-//     if (isActive) {
-//       interval = setInterval(() => {
-//         setTimer((timer) => timer + 1);
-//       }, 1000);
-//     } else if (!isActive && timer !== 0) {
-//       clearInterval(interval);
-//     }
-//     return () => clearInterval(interval);
-//   }, [isActive]);
-
-//   const initializeGame = async () => {
-//     const response = await fetch('http://localhost:5000/cards');
-//     const shuffledCards = await response.json();
-//     setCards(shuffledCards);
-//     setFlippedCards([]);
-//     setMatchedCards([]);
-//     setWin(false);
-//     setScore(0);
-//     setTimer(0);
-//     setIsActive(true);
-//   };
-
-//   const handleCardClick = (index) => {
-//     if (flippedCards.length === 2 || matchedCards.includes(index)) return;
-
-//     setFlippedCards([...flippedCards, index]);
-
-//     if (flippedCards.length === 1) {
-//       const [firstIndex] = flippedCards;
-//       if (cards[firstIndex] === cards[index]) {
-//         setMatchedCards([...matchedCards, firstIndex, index]);
-//         setScore(score + 10);
-//         if (matchedCards.length + 2 === cards.length) {
-//           setWin(true);
-//           setIsActive(false);
-//         }
-//       } else {
-//         setScore(score - 1); // Penalize incorrect match
-//       }
-//       setTimeout(() => setFlippedCards([]), 1000);
-//     }
-//   };
-
-//   return (
-//     <Box
-//       display="flex"
-//       flexDirection="column"
-//       alignItems="center"
-//       justifyContent="center"
-//       minHeight="100vh"
-//       bgcolor="#1a1a1a"
-//       color="white"
-//       p={4}
-//     >
-//       <Typography
-//         variant="h3"
-//         gutterBottom
-//         color="gold"
-//         sx={{
-//           fontSize: { xs: '1.5rem', sm: '2rem', md: '3rem' }, // Responsive font sizes
-//         }}
-//       >
-//         Harry Potter Card Guessing Game
-//       </Typography>
-
-//       {win && (
-//         <Box
-//           display="flex"
-//           flexDirection="column"
-//           alignItems="center"
-//           justifyContent="center"
-//           bgcolor="gold"
-//           color="black"
-//           p={2}
-//           borderRadius={2}
-//           mb={4}
-//           sx={{
-//             width: { xs: '90%', sm: '60%', md: '40%' }, // Adjust popup size
-//           }}
-//         >
-//           <Typography variant="h5">Congratulations! You've won!</Typography>
-//           <Typography>Your score: {score}</Typography>
-//           <Typography>Your time: {timer} seconds</Typography>
-//         </Box>
-//       )}
-
-//       <Box
-//         display="flex"
-//         justifyContent="space-between"
-//         width="100%"
-//         maxWidth="500px"
-//         mb={4}
-//         sx={{
-//           width: { xs: '90%', sm: '80%', md: '60%' }, // Responsive width for score and timer box
-//         }}
-//       >
-//         <Typography>Score: {score}</Typography>
-//         <Typography>Timer: {timer}s</Typography>
-//       </Box>
-
-//       {/* Responsive Grid Layout with 6x6 grid on large screens */}
-//       <Grid container spacing={1} justifyContent="center">
-//         {cards.map((card, index) => (
-//           <Grid
-//             item
-//             key={index}
-//             xs={4}  // 3 cards per row on small screens
-//             sm={3}  // 4 cards per row on medium screens
-//             md={2}  // 6 cards per row on large screens (6x6 grid)
-//             sx={{
-//               padding: '8px', // Adjust padding between cards
-//             }}
-//           >
-//             <CardComponent
-//               index={index}
-//               value={card}
-//               isFlipped={flippedCards.includes(index) || matchedCards.includes(index)}
-//               onClick={() => handleCardClick(index)}
-//             />
-//           </Grid>
-//         ))}
-//       </Grid>
-
-//       <Button
-//         variant="contained"
-//         color="warning"
-//         onClick={initializeGame}
-//         sx={{
-//           mt: 4,
-//           fontSize: { xs: '0.8rem', sm: '1rem', md: '1.2rem' }, // Responsive button text
-//         }}
-//       >
-//         Restart Game
-//       </Button>
-//     </Box>
-//   );
-// };
-
-// export default Game;
 
 import React, { useState, useEffect } from 'react';
 import { Box, Button, Grid, Typography } from '@mui/material';
 import CardComponent from './Card';
 
-// Sample Harry Potter character names (18 characters for 36 cards)
+
 const harryPotterCharacters = [
   'Harry Potter', 'Hermione Granger', 'Ron Weasley', 'Albus Dumbledore', 'Severus Snape',
   'Draco Malfoy', 'Sirius Black', 'Remus Lupin', 'Bellatrix Lestrange', 'Voldemort',
@@ -306,7 +146,7 @@ const Game = () => {
             sm={3}
             md={2}
             sx={{
-              padding: '5px', // Adjust padding to make cards closer
+              padding: '5px', 
             }}
           >
             <CardComponent
