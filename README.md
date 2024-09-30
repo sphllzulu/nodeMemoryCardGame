@@ -23,7 +23,7 @@ Immerse yourself in the wizarding world as you match pairs of cards featuring yo
   - Material-UI (MUI) for styling and components
 - Backend:
   - Node.js
-  - Express.js
+  - express.js
 
 ## Prerequisites
 
@@ -50,7 +50,7 @@ Before you begin, ensure you have the following installed:
    npm install
    ```
 
-3. Create a `.env` file in the server directory and add any necessary environment variables.
+
 
 ## Running the Application
 
