@@ -6,6 +6,9 @@ A magical and interactive card matching game built with React, Vite, Material-UI
 
 Immerse yourself in the wizarding world as you match pairs of cards featuring your favorite Harry Potter characters. The game challenges players to match pairs of cards in a 6x6 grid. Players select two cards at a time; if they match, they remain open. If they don't match, they flip back to hide their contents. The game is won when all 18 pairs of characters are successfully matched.
 
+## Screenshot
+![Image](https://github.com/user-attachments/assets/9a894d31-2fb9-4fa5-b717-c48cdff62095)
+
 ## Features
 
 - Dynamic card placement at the start of each game
